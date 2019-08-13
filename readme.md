@@ -2,26 +2,45 @@
 
 Full stack coding challenge for Zappar.
 
-## Tasks
+## Task
 
 Write a small Django application that loads random user data from an external API like https://randomuser.me/, saves that data into a database then renders a HTML template with a contact card component. That component should be built using TypeScript and any other library/framework that would like.
 
-## 
-### MVP
+## Install
 
-- Authentication system
-- Suscribe to a RSS feed
-- Dashboard that list all your RSS feeds
-- Detail page to show the news/podcast info
-- Download a file from the RSS (pdf/mp3...)
-- Weekly email with the list of news articles/podcast related to your subscription
-- Toogle an alert for each subscription to receive an email when a new article/podcast
+### Clone the repo:
+`git clone https://github.com/benoitboyer/Zappar_coding_challenge.git`
 
-### Nice to have at some point
+## Backend side
+### Install Python requirements:
+`pip install -r requirements.txt`
+### Create the database
+`cd coding_challenge`
+`python manage.py migrate`
+### Run the server
+`python manage.py runserver`
+## Frontend side
+The project is already bundleled. Install the following if you want to play with it.
+## Install the npm dependencies
+`npm install`
+recreate the build:
+`npm start`
 
-- Possibility to share your own feed selection with other users
-- Feed of the week from the community
-- Private message between users
+## How to use
+On the page you will see an empty card.
+You have  2 options:
+- Generate a profile from the database (You will get an error if the database is empty)
+- Grab a random new one from random user api: The DRF view will call random user api and the needed data will be serialized and stored in the db and send back to the frontend (api call from frontend using axios).
+
+## Warning:
+Sometimes `Import a new profile` will trigger an error.
+This is because the email address from random user is not RFC compliant (the email adress could contains special character).
+The django mode is using the EmailField to store that email (wich reject those invalid email).
+I didn't want to store the email in a CharField with a regular regex with `*@*` because it doesn't make sense.
+And display this error to the end user didn't make sense because they have no control over it.
+
+So try to click few times :)
+
 
 ## Techs stack
 
@@ -31,8 +50,7 @@ Write a small Django application that loads random user data from an external AP
 - Bootsrap 4
 - Typescript
 
-
-## Licence
-
-This app is licenced under MIT licence.
+## Side note
+The project was really fun to make.
+It gave me the possibility to learn more about typescript and discover how it can work within React.
 
