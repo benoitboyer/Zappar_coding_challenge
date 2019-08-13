@@ -1,0 +1,22 @@
+.icon-fa:hover {
+  color: #93C9BB !important;
+  text-shadow: 2px 2px 5px #bdebfc;
+} 
+
+body {
+  background-color: #F8FAF9;
+  color:rgb(108, 117, 125);
+}
+
+
+.navbar-custom {
+  background-color: #F17456!important;
+  color: #F8FAF9;
+}
+
+.btn-outline-secondary {
+  border-color: #4c406e!important;
+}
+.btn-outline-secondary:hover {
+  background-color: #4c406e!important;
+}
