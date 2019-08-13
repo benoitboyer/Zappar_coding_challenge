@@ -23,7 +23,8 @@ Write a small Django application that loads random user data from an external AP
 The project is already bundleled. Install the following if you want to play with it.
 ## Install the npm dependencies
 `npm install`
-recreate the build:
+
+and recreate the build:
 `npm start`
 
 ## How to use
@@ -35,9 +36,10 @@ You have  2 options:
 ## Warning:
 Sometimes `Import a new profile` will trigger an error.
 This is because the email address from random user is not RFC compliant (the email adress could contains special character).
-The django mode is using the EmailField to store that email (wich reject those invalid email).
+The django model is using the EmailField to store that email (wich reject this invalid email).
+
 I didn't want to store the email in a CharField with a regular regex with `*@*` because it doesn't make sense.
-And display this error to the end user didn't make sense because they have no control over it.
+And display this error to the end user didn't make sense either because they have no control over it.
 
 So try to click few times :)
 
