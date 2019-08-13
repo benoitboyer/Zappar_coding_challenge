@@ -28,9 +28,9 @@ and recreate the build:
 `npm start`
 
 ## Project Structure
-The DRF API is inside the `profiles` app, the views and serializer are inside the src folder.
+The DRF API is inside the `profiles` app, the views and serializer are inside the `api` folder.
 
-The projet settings are inside `coding_challenge`
+The project settings are inside `coding_challenge`
 
 The Frontend is inside `frontend` which is also a django app.
 
@@ -64,5 +64,6 @@ So try to click few times :)
 
 ## Side note
 The project was really fun to make.
+
 It gave me the possibility to learn more about typescript and discover how it can work within React.
 
