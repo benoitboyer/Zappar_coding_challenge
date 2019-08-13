@@ -27,6 +27,16 @@ The project is already bundleled. Install the following if you want to play with
 and recreate the build:
 `npm start`
 
+## Project Structure
+The DRF API is inside the `profiles` app, the views and serializer are inside the src folder.
+
+The projet settings are inside `coding_challenge`
+
+The Frontend is inside `frontend` which is also a django app.
+
+You can find the uncompiled js source inside `frontend/src`
+
+
 ## How to use
 On the page you will see an empty card.
 You have  2 options:
@@ -35,7 +45,7 @@ You have  2 options:
 
 ## Warning:
 Sometimes `Import a new profile` will trigger an error.
-This is because the email address from random user is not RFC compliant (the email adress could contains special character).
+This is because the email address from  https://randomuser.me/ is not RFC compliant (the email adress could contains special character).
 The django model is using the EmailField to store that email (wich reject this invalid email).
 
 I didn't want to store the email in a CharField with a regular regex with `*@*` because it doesn't make sense.
